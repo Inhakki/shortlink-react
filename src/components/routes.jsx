@@ -5,6 +5,7 @@ import {
   Link
 } from 'react-router-dom'
 
+import TopHits from './top-hits';
 import Search from './search';
 
 class Routes extends React.Component {

@@ -22,3 +22,5 @@ class TopHits extends React.Component {
     </div>)
   }
 }
+
+export default TopHits;

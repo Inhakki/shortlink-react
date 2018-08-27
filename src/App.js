@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import shorts from '../public/shorts.jpg';
+import shorts from './shorts.jpg';
 import './App.css';
 import Routes from './components/routes';
 
