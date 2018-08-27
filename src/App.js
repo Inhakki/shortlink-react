@@ -1,16 +1,22 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
+import shorts from '../public/shorts.jpg';
 import './App.css';
+import Routes from './components/routes';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <header>
-          <img src="/shorts.jpg"/>
+        <div id="page-header">
+          <img src={shorts}/>
           <h1>Short shorts</h1>
           <p>Url shortener</p>
-        </header>
+        </div>
+
+        <div className="page-body">
+          <Routes />
+        </div>
       </div>
     );
   }
