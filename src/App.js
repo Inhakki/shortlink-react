@@ -11,21 +11,17 @@ const styles = () => {
 
 };
 
-
 class App extends Component {
   render() {
     return (
       <div className="App">
         <AppBar position="static">
           <Toolbar>
-            <img alt="short shorts logo" src={shorts}/>
+            <img alt="short shorts logo" width="150" src={shorts}/>
             <Typography variant="title" color="inherit">
-
-              Short shorts
+              <h2>Short shorts</h2>
+              <p>Url shortener</p>
             </Typography>
-
-            <p>Url shortener</p>
-
           </Toolbar>
         </AppBar>
 
