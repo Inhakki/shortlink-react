@@ -1,25 +1,29 @@
 import React from 'react'
 import {
+  Grid
+} from '@material-ui/core';
+import {
   BrowserRouter as Router,
-  Route,
-  Link
+  Route
 } from 'react-router-dom'
 
-import TopHits from './top-hits';
+import NavTabs from './navTabs';
+import TopHits from './topHits';
 import Search from './search';
 
 class Routes extends React.Component {
   render() {
     return(
       <Router>
-        <div className="sub-header">
-          <ul>
-            <li><Link to="/">Search</Link></li>
-            <li><Link to="/top-100">Top 100</Link></li>
-          </ul>
-          <Route exact path='/' component={Search} />
-          <Route path='/top-100' component={TopHits} />
-        </div>
+        <Grid>
+          <div className="sub-header">
+            <NavTabs />
+            <Grid item xs="8">
+              <Route exact path='/' component={Search} />
+              <Route path='/top-100' component={TopHits} />
+            </Grid>
+          </div>
+        </Grid>
       </Router>
     )
   }

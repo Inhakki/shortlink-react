@@ -1,5 +1,5 @@
 import React from 'react';
-import { TextField } from '@material-ui/core'
+import { TextField, Button } from '@material-ui/core'
 import { withStyles } from '@material-ui/core/styles';
 
 const styles = {
@@ -11,9 +11,20 @@ class Search extends React.Component {
     super(props);
 
     this.state = {
-      searchTerm: '',
+      searchTerm: null,
     }
   }
+
+  handleLinkSearch = () => {
+    const term = this.state.searchTerm;
+    debugger
+  };
+
+  handleChange = name => event => {
+    this.setState({
+      [name]: event.target.value,
+    });
+  };
 
   render() {
     const classes = this.props;
@@ -26,7 +37,15 @@ class Search extends React.Component {
           type="search"
           className={classes.textField}
           margin="normal"
+          value={this.state.searchTerm}
+          onChange={this.handleChange('searchTerm')}
         />
+
+        <Button
+          onClick={this.handleLinkSearch}
+        >
+          Find Link
+        </Button>
       </div>
     )
   }

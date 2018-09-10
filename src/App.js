@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import shorts from './shorts.jpg';
+import shorts from './shorts1.png';
 import './styles/App.css';
 import Routes from './components/routes';
 import { withStyles } from '@material-ui/core/styles';
